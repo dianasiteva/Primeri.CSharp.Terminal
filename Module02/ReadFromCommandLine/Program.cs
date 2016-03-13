@@ -29,6 +29,23 @@ namespace ReadFromCommandLine
 			Console.WriteLine ("Работа с Replace: " + test + "\n");
 			Console.WriteLine ("3ти знак : " + test.Split(';')[2] + "\n");
 
+			//Домашно 1
+			string x = "Hello";
+			string y = "World";
+			object obj = x + " " + y + "!";
+			string z = (obj).ToString();
+
+			Console.WriteLine(z);
+
+			//Домашно 2
+			int i=7;
+			string str = " с допълнение";
+
+			Console.WriteLine ("Числото е " + i + ",");
+			Console.WriteLine ("а стрингът е '" + str + "'.");
+			Console.WriteLine ("Дължината на стринг '" + (i.ToString() + str) + "' е " + (i.ToString() + str).Length + ".");
+
+
 		}
 	}
 }
