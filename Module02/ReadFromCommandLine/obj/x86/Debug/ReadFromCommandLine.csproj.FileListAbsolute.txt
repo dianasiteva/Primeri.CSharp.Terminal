@@ -1,0 +1,4 @@
+C:\aula\primeri.csharp.terminal\Module02\ReadFromCommandLine\bin\Debug\ReadFromCommandLine.exe
+C:\aula\primeri.csharp.terminal\Module02\ReadFromCommandLine\bin\Debug\ReadFromCommandLine.pdb
+C:\aula\primeri.csharp.terminal\Module02\ReadFromCommandLine\obj\x86\Debug\ReadFromCommandLine.exe
+C:\aula\primeri.csharp.terminal\Module02\ReadFromCommandLine\obj\x86\Debug\ReadFromCommandLine.pdb
