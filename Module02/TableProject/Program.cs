@@ -6,7 +6,7 @@ namespace TableProject
 	{
 		public static void Main (string[] args)
 		{
-			//Деклариране на масив
+			//Деклариране на масив с тип данни string
 			string[] row = new string[3];
 			row[0]="Ред 1";
 			row[1]="Ред 2";
@@ -21,6 +21,66 @@ namespace TableProject
 			//Представяне на масив в стринг
 			string list1 = string.Join (";", parse);
 			Console.WriteLine("Новият стринг е\n" + list1+ "\n\n");
+
+			//Задача 1
+			int[] masiv = new int[20];
+			string s;
+
+			for (int i = 0; i < 20; i++) {
+				masiv [i] = i * 5;
+				if (i < 19)
+					s = ";";
+				else
+					s = "\n";
+				Console.Write (masiv [i] + s);
+											}
+
+			//Задача 2
+			Console.WriteLine("\n\nВъведете данни за първи масив, разделени със , :\n");
+			string[] in1 = Console.ReadLine().Split (',');
+			Console.WriteLine ("Въведете данни за втори масив, разделени със , :\n");
+			string[] in2 = Console.ReadLine().Split (',');
+			int ii=0;
+			if (in1.Length != in2.Length) ii=1;
+			if (ii==0){
+				for (int j=0; j<in1.Length;j++){
+					if (in1[j]!=in2[j]) ii=1;
+												}
+					
+					}
+			if (ii==0)
+				Console.WriteLine ("Масивите са еднакви.\n");
+			else
+				Console.WriteLine ("Масивите  не са еднакви.\n\n");
+
+
+			//Задача 3
+			Console.WriteLine("\n\nВъведете данни за трети масив, разделени със , :\n");
+			string[] in3 = Console.ReadLine().Split (',');
+			int jj = in3.Length;
+			ii = 0;
+				for (int n=0;n<jj/2;n++){
+				if (in3[n]!=in3[jj-n-1]) ii=1;
+										}
+					if (ii==0)
+					Console.WriteLine ("Масивът е симетричен.\n");
+					else
+					Console.WriteLine ("Масивът не е симетричен.\n\n");
+
+
+			//Задача 4
+			Console.WriteLine("\n\nВъведете данни за четвърти масив, разделени със , :\n");
+			string[] in4 = Console.ReadLine().Split (',');
+			int jm = in4.Length;
+
+			for (int m=jm-1;m>=0;m--){
+				if (m != 0)
+					s = ";";
+				else
+					s = "\n";
+				Console.Write (in4 [m] + s);
+			}
+						
 
 		}
 	}
