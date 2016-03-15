@@ -4,21 +4,28 @@ namespace TableProject
 {
 	class MainClass
 	{
+		enum ti {ime=0, familia, godini};
+
+
 		public static void Main (string[] args)
 		{
 			//Дефиниране на таблица
 			string[,] table = new string[2,3];
 
 			//Въвеждане на първи ред
-				table[0,0]="Мартин";table[0,1]="Мартинов";table[0,2]="25 г.";
+			table[0, (int) ti.ime]="Мартин";  table[0, (int) ti.familia]="Мартинов"; table[0, (int) ti.godini]="25 г.";
 			//Въвеждане на втори ред
-			    table[1,0]="Мартинчо";table[1,1]="Мартинов";table[1,2]="30 г.";
+			table[1, (int) ti.ime]="Мартинчо";table[1, (int) ti.familia]="Мартинов"; table[1, (int) ti.godini]="30 г.";
 
 			//Печат
 			Console.Write("Кой ред искате да видите?");
 			int i = Convert.ToInt32 (Console.ReadLine()) - 1;
 //			Console.WriteLine (i);
-			Console.WriteLine ((table[i,0])[0] + ". " + table[i,1] + ", " + table[i,2]);
+			Console.WriteLine (
+				(table[i, (int) ti.ime])[0] + ". " + 
+				 table[i, (int) ti.familia] + ", " + 
+				 table[i, (int) ti.godini]
+							);
 			    
 
 
