@@ -14,19 +14,40 @@ namespace BoolExplore2
 			_input = Console.ReadLine ();
 
 			bool ch1 = int.TryParse (_input, out _ui);
-			_ui = (_ui <= _i.Length) ? _ui : 3;
-			_ui = (_ui > 0) ? _ui : 1;
 
-			if (ch1) {
-				Console.WriteLine (_i[_ui-1]);
+			switch (_ui) {
+			case 1:
+				Console.Write ("1ви елемент е : ");
+				Console.WriteLine (_i [_ui - 1]);
+				break;
+			case 2:
+				Console.Write ("2ри елемент е : ");
+				Console.WriteLine (_i [_ui - 1]);
+				break;
+			case 3:
+				Console.Write ("3ти елемент е : ");
+				Console.WriteLine (_i [_ui - 1]);
+				break;
+			default:
+				Console.Write ("Грешка!");
+				break;
 			}
 
-			int a=5, b=10, c=3;
-			int x = 0;
-			x = (a > b) ? a : b;
-			x += (b > c) ? 1 : -1;
-			x += (a < c) ? 3 : -2;
-			Console.WriteLine(x);
+//			_ui = (_ui <= _i.Length) ? _ui : 3;
+//			_ui = (_ui > 0) ? _ui : 1;
+//
+//			if (ch1) {
+//				Console.WriteLine (_i[_ui-1]);
+//			}
+//
+//
+//			//задача
+//			int a=5, b=10, c=3;
+//			int x = 0;
+//			x = (a > b) ? a : b;
+//			x += (b > c) ? 1 : -1;
+//			x += (a < c) ? 3 : -2;
+//			Console.WriteLine(x);
 
 		}
 	}
