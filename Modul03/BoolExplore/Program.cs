@@ -15,7 +15,6 @@ namespace BoolExplore
 			int _ui = 0;   //Convert.ToInt32 ( Console.ReadLine());
 			string _input="0";
 
-			Console.WriteLine ("Моля въведете индекс: ");
 			_input = Console.ReadLine ();
 
 			bool ch1 = int.TryParse (_input, out _ui);
@@ -34,6 +33,11 @@ namespace BoolExplore
 			if (!ch3 && ch1) {
 				Console.WriteLine ("\nПо-малък индекс\n");
 			}
+
+
+
+
+
 
 //			bool _check01 = _ui <= _i.Length;
 //			bool _check02 = _ui > 0;
