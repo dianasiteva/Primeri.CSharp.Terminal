@@ -20,6 +20,14 @@ namespace BoolExplore2
 			if (ch1) {
 				Console.WriteLine (_i[_ui-1]);
 			}
+
+			int a=5, b=10, c=3;
+			int x = 0;
+			x = (a > b) ? a : b;
+			x += (b > c) ? 1 : -1;
+			x += (a < c) ? 3 : -2;
+			Console.WriteLine(x);
+
 		}
 	}
 }
