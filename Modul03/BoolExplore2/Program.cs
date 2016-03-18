@@ -15,23 +15,35 @@ namespace BoolExplore2
 
 			bool ch1 = int.TryParse (_input, out _ui);
 
-			switch (_ui) {
-			case 1:
-				Console.Write ("1ви елемент е : ");
+			try{
+				Console.Write (_ui.ToString() + " елемент от масива е : ");
 				Console.WriteLine (_i [_ui - 1]);
-				break;
-			case 2:
-				Console.Write ("2ри елемент е : ");
-				Console.WriteLine (_i [_ui - 1]);
-				break;
-			case 3:
-				Console.Write ("3ти елемент е : ");
-				Console.WriteLine (_i [_ui - 1]);
-				break;
-			default:
-				Console.Write ("Грешка!");
-				break;
+			}catch{
+				Console.WriteLine ("<грешен елемент>");
 			}
+
+
+
+			//Използване на Switch
+
+//			switch (_ui) {
+//			case 1:
+//				Console.Write ("1ви елемент е : ");
+//				Console.WriteLine (_i [_ui - 1]);
+//				break;
+//			case 2:
+//				Console.Write ("2ри елемент е : ");
+//				Console.WriteLine (_i [_ui - 1]);
+//				break;
+//			case 3:
+//				Console.Write ("3ти елемент е : ");
+//				Console.WriteLine (_i [_ui - 1]);
+//				break;
+//			default:
+//				Console.Write ("Грешка!\n");
+//				break;
+//			}
+			//Условно присвояване
 
 //			_ui = (_ui <= _i.Length) ? _ui : 3;
 //			_ui = (_ui > 0) ? _ui : 1;
