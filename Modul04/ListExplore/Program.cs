@@ -36,6 +36,29 @@ namespace ListExplore
 
 			}
 			while(_userinput != "exit" );
+
+
+			//Задача
+//			List<string> z = new List<string> ();
+//			z.Add("Иван");
+//			z.Add("Драган");
+//			Console.WriteLine( z.Count );
+//			if (z.Contains("Драган")) Console.WriteLine("Драган е тук");
+
+//			2
+//			Action<string> cw = Console.WriteLine;
+//			List<string> z = new List<string> ();
+//
+//			z.Add("ябълка");
+//			z.Add("круша");
+//			z.Add("мармалад");
+//			z.Add("грозде");
+//
+//			int i = z.IndexOf("мармалад");
+//			z.RemoveAt(i);
+//			foreach(string x in z) {
+//				cw(x);
+//			}
 		}
 	}
 }
