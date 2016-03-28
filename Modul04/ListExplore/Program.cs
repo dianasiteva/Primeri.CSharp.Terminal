@@ -80,6 +80,23 @@ namespace ListExplore
 //			foreach(string x in z) {
 //				cw(x);
 //			}
+
+
+
+//			Action<string> cw = Console.WriteLine;
+//			List<string> z = new List<string> ();
+//
+//			z.Add("ементал");
+//			z.Add("дръжка");
+//			z.Add("вафла");
+//			z.Add("грозде");
+//			z.Add("боркан");
+//			z.Add("амфибия");
+//
+//			z.Sort();
+//			cw( string.Join(", ",z) );
+//			z.Reverse();
+//			cw( string.Join(", ",z) );
 		}
 	}
 }
