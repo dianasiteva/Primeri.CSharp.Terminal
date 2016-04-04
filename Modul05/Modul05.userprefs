@@ -1,11 +1,14 @@
-﻿<Properties StartupItem="ListExplore\ListExplore.csproj">
+﻿<Properties StartupItem="Modul05\Modul05.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Modul05\Program.cs">
+    <Files>
+      <File FileName="Modul05\Program.cs" Line="15" Column="23" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Modul04" expanded="True">
-            <Node name="ListExplore" expanded="True">
+          <Node name="Modul05" expanded="True">
+            <Node name="Modul05" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -14,9 +17,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\aula\primeri.csharp.terminal\Modul04\ListExplore\Program.cs" line="90" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
