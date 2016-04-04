@@ -1,9 +1,20 @@
 ﻿<Properties StartupItem="ListExplore\ListExplore.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Modul04\Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ListExplore\Program.cs">
     <Files>
-      <File FileName="Modul04\Program.cs" Line="24" Column="33" />
+      <File FileName="ListExplore\Program.cs" Line="90" Column="22" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Modul04" expanded="True">
+            <Node name="ListExplore" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
