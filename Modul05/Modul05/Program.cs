@@ -37,6 +37,14 @@ namespace Modul05
 						Console.WriteLine ( 0 );
 					}
 				}
+
+				if ( usercommand.Contains ( "cmd05" )  )
+				{
+					Console.WriteLine ( "Брой четни числа : " + cmd05 ( usercommand ).Length.ToString()  );
+
+				}
+
+
 			} while (usercommand != "exit");
 
 
@@ -102,6 +110,34 @@ namespace Modul05
 
 		}
 
+		//Масиви
+		public static string[] cmd05 ( string _input )
+		{
+			
+			try
+			{
+				int _border = 0;
+				string _temp = "";
+				if ( int.TryParse ( _input.Split(' ')[1], out _border ) )
+				{
+					for ( int i=0;i<_border;i++ )
+					{
+						if ( i % 2 == 0 ) _temp += i.ToString();
+						if ( i<_border-1 && i % 2 == 0 ) _temp += ",";
+
+
+					}
+					if ( _border % 2 == 0 ) _temp += _border.ToString();
+					Console.WriteLine ( _temp );   //за проверка
+					return ( _temp.Split (',') );
+				}
+
+			}catch{
+			}
+
+			return new string[1] { "0" };
+		}
+
 	}
 }
 //using System;
@@ -135,5 +171,52 @@ namespace Modul05
 //		public static int suma( int a, int b) {
 //			return a + b;
 //		}
+//	}
+//}
+//
+//using System;
+//using System.Collections.Generic;
+//
+//namespace TestovaPrograma {
+//	class MainClass {
+//		public static void Main (string[] args) {
+//
+//			// Изпълнете функцията тук       
+//			int my = 0;
+//			bool chetno;
+//			chetno = proba(2,5, out my);
+//			Console.WriteLine("Сумата на 2 и 5 е "+my+" и това е "+((chetno)?"четно":"нечетно"));
+//		}
+//		// Добавете новата функция тук
+//		public static bool proba(int a, int b, out int c) {
+//			c = a + b;
+//			if (c%2 == 0) return true;
+//			else return false;
+//		}
+//
+//	}
+//}
+//using System;
+//using System.Collections.Generic;
+//
+//namespace TestovaPrograma {
+//	class MainClass {
+//		public static void Main (string[] args) {
+//			Action<string> cw = Console.WriteLine;
+//			// Изпълнете функцията тук      
+//			int x = 0;
+//			proba (ref x);
+//			cw("Променлива: "+x);
+//			proba (ref x);
+//			cw("Променлива: "+x);
+//			proba (ref x);
+//			cw("Променлива: "+x);
+//
+//		}
+//		// Добавете новата функция тук
+//		public static void proba(ref int a) {
+//			a = a + 5;
+//		}
+//
 //	}
 //}
