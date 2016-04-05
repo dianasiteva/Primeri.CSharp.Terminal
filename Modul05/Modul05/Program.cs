@@ -15,6 +15,28 @@ namespace Modul05
 				Console.Write ("$ "); usercommand = Console.ReadLine();
 				if ( usercommand.Contains ( "cmd01" )  ) cmd01 ( usercommand );
 				if ( usercommand.Contains ( "cmd02" )  ) Console.WriteLine ( cmd02 ( usercommand ));
+				if ( usercommand.Contains ( "cmd03" )  )
+				{
+					double _a=0;
+					if ( cmd03 ( usercommand , out _a ) )
+					{
+						Console.WriteLine ( "\na . a = " + _a.ToString() );
+					}else{
+						Console.WriteLine ( "\nКомандата не е въведена правилно." );
+					}
+				}
+				if ( usercommand.Contains ( "cmd04" )  )
+				{
+					double _c=-2, _t=6;
+					if ( cmd04 (ref _t) )
+					{
+						Console.WriteLine (_t );
+					}
+					if ( cmd04 (ref _c) )
+					{
+						Console.WriteLine ( 0 );
+					}
+				}
 			} while (usercommand != "exit");
 
 
@@ -51,7 +73,34 @@ namespace Modul05
 
 		}
 
+		//Референции
+		public static bool cmd03 ( string _input, out double _i )
+		{
 
+			try{
+				string _p = _input.Split(' ')[1];
+				double __p = 0;
+				if ( double.TryParse( _p, out __p) )
+				{
+					_i = __p*__p;
+					return true;
+				}
+
+			}catch{
+			}
+
+			_i = 0;
+			return false;
+		}
+
+
+		public static bool cmd04 ( ref double _i )
+		{
+			double _temp = _i;
+			_i = _i * _i;
+			return ( _temp > 0 );
+
+		}
 
 	}
 }
