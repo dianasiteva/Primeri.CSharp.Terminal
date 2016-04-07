@@ -5,53 +5,105 @@ namespace ClassExplorer
 
 	public class person
 	{
-		private string sipleString = "тестова променлива от клас";
-		private string user = "";
 
-		private string hiddenString = "";
+		private string _userName = "";            //променливи
+		private string _userPass = "";
 
-		public person ( string _ini )
+		private string _userID = "";
+		private string _userFName = "";
+		private string _userLName = "";
+
+		public string userID                             //property
 		{
-			
-			getUser ( _ini );
-			setwelcomeText ();
-
-//			sipleString = "Промяна на тестовата променлива от клас.";
+			get { return _userID; }
+			set { _userID = value; }
 		}
 
-		private void getUser ( string _ini )
+		public string userFName                             //property
 		{
-			if (_ini == "password1") hiddenString = "Потребител 1";
-			if (_ini == "password2") hiddenString = "Потребител 2";
-			user = hiddenString;
+			get { return _userFName; }
+			set { _userFName = value; }
 		}
 
-		private void setwelcomeText ()
+		public string userLName                             //property
 		{
-			if (hiddenString.Length > 0)
-				sipleString = "Добре дошли отново, " + user + "!";
-			else
-				sipleString = "Вие нямате достъп до тази приграма!";
+			get { return _userLName; }
+			set { _userLName = value; }
 		}
 
-		public string getwelcomeMassage ()
+		public person ( string _user, string _pass )          //входни параметри на класа person
+				{
+			checkUser ( _user, _pass );
+				}
+
+
+
+
+		private bool checkUser ( string _user, string _pass )     //метод
 		{
-			return sipleString;
+			if ( _user == "user" && _pass == "pass" )
+			{
+				//Попълване на пропъртита
+				_userID = "ID: 555";
+				_userFName = "Diana";
+				_userLName = "Siteva";
+				return true;
+			}
+			return false;
+
 		}
 
+
+//		private string sipleString = "тестова променлива от клас";
+//		private string user = "";
+//
+//		private string hiddenString = "";
+//
+//		public person ( string _ini )
+//		{
+//			
+//			getUser ( _ini );
+//			setwelcomeText ();
+//
+////			sipleString = "Промяна на тестовата променлива от клас.";
+//		}
+//
+//		private void getUser ( string _ini )
+//		{
+//			if (_ini == "password1") hiddenString = "Потребител 1";
+//			if (_ini == "password2") hiddenString = "Потребител 2";
+//			user = hiddenString;
+//		}
+//
+//		private void setwelcomeText ()
+//		{
+//			if (hiddenString.Length > 0)
+//				sipleString = "Добре дошли отново, " + user + "!";
+//			else
+//				sipleString = "Вие нямате достъп до тази приграма!";
+//		}
+//
+//		public string getwelcomeMassage ()
+//		{
+//			return sipleString;
+//		}
+//
 	}
 
 	class MainClass
 	{
 		public static void Main (string[] args)
 		{
-			Console.Write ("Парола : ");
+			Console.Write ("Потребител : ");
 			string _user = Console.ReadLine();
+			Console.Write ("Парола : ");
+			string _pass = Console.ReadLine();
 			//Дефиниране на клас
-			person _person = new person ( _user );
+			person _person = new person ( _user, _pass );
 
 			//Достъпване на клас
-			Console.WriteLine ( _person.getwelcomeMassage () );
+			Console.WriteLine ( _person.userFName + " " + _person.userLName);
+			//			Console.WriteLine ( _person.getwelcomeMassage () );
 		}
 	}
 }
