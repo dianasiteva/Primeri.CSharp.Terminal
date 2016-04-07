@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="ClassExplorer\ClassExplorer.csproj">
+﻿<Properties StartupItem="Fact\Fact.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ClassExplorer\Program.cs">
     <Files>
